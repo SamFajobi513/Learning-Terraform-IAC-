@@ -22,5 +22,24 @@ resource "aws" "" {
 #string
 
 #Lists(this is defined in a bracket)
-security_groups = ["hj", "book"]
+resource "" "" {
+    security_groups = ["hj", "book"]
+}
+
+#Maps
+variable "" {
+    type = map
+    map = {type1 ="value1", type2="value2", type3="value3"}
+}
+
+locals {
+    my_maps = {"name1" = "Bola", "name2" = "Olami", "name3" = "bukun"}
+}
+
+#To get the data in the map;
+#locals.my_maps['name1']
+
+
+#Conditions(they are used to make decisions);
+
 
