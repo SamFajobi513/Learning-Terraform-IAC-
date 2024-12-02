@@ -1,5 +1,10 @@
 #Learning HCL 
 
+#setting the cloud provider
+provider "aws" {
+    region = "us-east-1"
+}
+
 #modules
 
 #Blocks(this serves as  a container for other content like the attributes..)
@@ -42,4 +47,8 @@ locals {
 
 #Conditions(they are used to make decisions);
 
+resource "aws_instance" "this" {
+  ami                     = "ami-0dcc1e21636832c5d"
+  instance_type           = "m5.large" 
+} 
 
